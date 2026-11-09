@@ -16,5 +16,9 @@
 
 <input type="submit" value="로그인" >
 </form>
+<hr>
+<a href="board.jsp">게시판</a>
+<a href="userInfo.jsp">회원 정보</a>
+<a href="sessionInfo.jsp">세션 정보</a>
 </body>
 </html>

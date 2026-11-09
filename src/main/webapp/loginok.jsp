@@ -20,8 +20,25 @@
 		// 로그인의미는 session에 로그인한 유저의 아이디를 저장하는거
 		session.setAttribute("sessionId",mid);   // 로그인 체크 후 성공 작업, 유저의 아이디를저장
 		session.setAttribute("sessionValid","yes");
+		
+		// 로그인 성공시 loginSuccess.jsp페이지로 강제[ 이동]
+		
+		response.sendRedirect("loginSuccess.jsp");
+		
+		
 	}else {
+		
 		System.out.println("로그인 실패");
+		//실패하면 다시 로그인 페이지로
+		
+		out.println("<script>");
+		
+		out.println("alert('로그인이 필요하다');");
+		out.println("location.href='login.jsp';");
+		
+		out.println("</script>");
+		
+		// response.sendRedirect("login.jsp");
 	}
 
 
